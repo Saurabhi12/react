@@ -160,7 +160,7 @@ function App(){
   )
 }
 export default App
-*/
+
 
 import ListUser from "../ListUser.jsx";
 
@@ -171,3 +171,24 @@ function App(){
 }
 
 export default App
+*/
+
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Name from './Name';
+import About from './About';
+import Placement from './Placement';
+
+function App() {
+  return (
+    <Router>
+   
+      <Routes>
+        <Route path="/" element={<Name />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/placement" element={<Placement />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
